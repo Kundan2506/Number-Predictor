@@ -44,3 +44,14 @@ function restartGame(){
     wrong.innerHTML="The Game has been restarted"
 
 }
+
+const inputField = document.getElementById('input');
+const originalPlaceholder = inputField.placeholder;
+
+inputField.addEventListener('focus', () => {
+    inputField.placeholder = '';
+});
+
+inputField.addEventListener('blur', () => {
+    inputField.placeholder = originalPlaceholder;
+});
